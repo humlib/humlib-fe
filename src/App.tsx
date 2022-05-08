@@ -7,12 +7,13 @@ import Profile from './Profile'
 
 function App(): ReactElement {
     return (
-        <ReactKeycloakProvider
-            authClient={keycloak}
-            initOptions={{ pkceMethod: 'S256', onLoad: 'check-sso' }}
-        >
-            <Profile />
-        </ReactKeycloakProvider>
+        // <ReactKeycloakProvider
+        //     authClient={keycloak}
+        //     initOptions={{ pkceMethod: 'S256', onLoad: 'check-sso' }}
+        // >
+        //     <Profile />
+        // </ReactKeycloakProvider>
+        <h2>Hello World</h2>
     )
 }
 
