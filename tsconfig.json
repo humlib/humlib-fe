@@ -7,6 +7,6 @@
         "jsx": "react",
         "sourceMap": true,
         "target": "es5",
-        "types": ["node"]
+        "types": ["node", "jest", "@types/jest"]
     }
 }
