@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "scripts": {
         "serve": "webpack serve --mode development",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "test": "jest"
     },
     "devDependencies": {
         "@types/node": "^17.0.25",
