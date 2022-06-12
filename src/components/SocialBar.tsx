@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from './Link'
 
-export const SocialBar = (props: object) => (
+export const SocialBar = () => (
     <SocialIconsContainer>
         <SocialIconsInnerContainer>
             <Link
