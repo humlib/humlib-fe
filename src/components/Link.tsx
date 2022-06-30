@@ -18,7 +18,7 @@ interface LinkProps {
 }
 
 export const Link = ({ url, label, icon }: LinkProps) => (
-    <Anker href={url} textLink={!icon}>
+    <Anker href={url} textLink={!icon} target="_blank">
         {icon}
     </Anker>
 )
