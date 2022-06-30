@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "scripts": {
         "serve": "webpack serve --mode development",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "server": "http-server --p 8080 --cors -c-1 ./public/"
     },
     "devDependencies": {
         "@types/node": "^17.0.25",
@@ -32,6 +33,7 @@
         "@fortawesome/react-fontawesome": "^0.1.18",
         "@reduxjs/toolkit": "^1.8.1",
         "@types/react-fontawesome": "^1.6.5",
+        "http-server": "^14.1.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-redux": "^8.0.1",

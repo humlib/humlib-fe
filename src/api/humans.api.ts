@@ -31,13 +31,16 @@ export const useFetchHumans = (
     useEffect(() => {
         async function fetchFiles() {
             try {
-                const requestBody: RequestBody = { tags }
-                const request = new Request(
-                    `http://localhost:8080/search/contains?pageNo=${pageNumber}&pageSize=${pageSize}&matchesAtLeast=${matchesAtLeast}`,
-                    { method: 'GET', body: JSON.stringify(requestBody) }
+                // const requestBody: RequestBody = { tags }
+                // const request = new Request(
+                //     `http://localhost:8080/search/contains/humans.json?pageNo=${pageNumber}&pageSize=${pageSize}&matchesAtLeast=${matchesAtLeast}`,
+                //     { method: 'GET', body: JSON.stringify(requestBody) }
+                // )
+                // const response = await fetch(request)
+                const response = await fetch(
+                    'http://localhost:8080/search/contains/humans.json'
                 )
-                const response = await fetch(request)
-                const listOfHumans = await response.json()
+                const listOfHumans: Human[] = await response.json()
                 setHumans(listOfHumans)
             } catch (error) {
                 setError(error)
@@ -47,6 +50,6 @@ export const useFetchHumans = (
         }
         setIsLoading(true)
         fetchFiles()
-    }, [matchesAtLeast, pageNumber, tags])
+    }, [pageNumber, tags])
     return { humans, error, isLoading }
 }
