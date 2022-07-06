@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../styles/theme'
-import { Button } from './Button'
+import { TagComponent } from './Tag'
 
 export const SearchBar = () => (
     <Container>
-        <input placeholder="Gebe hier Deine Interessen ein" />
-        <Button onClick={() => {}}>🔍</Button>
+        <TagComponent />
     </Container>
 )
 

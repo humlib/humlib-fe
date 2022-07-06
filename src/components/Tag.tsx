@@ -1,26 +1,35 @@
-import React, { MouseEvent } from 'react'
+import React from 'react'
+import Select from 'react-select'
+import { Button } from './Button'
 import styled from 'styled-components'
-import { colors } from '../styles/theme'
-import type { DefaultProps } from '../types/props'
 
-interface TagProps extends DefaultProps {
-    onClick: (evt: MouseEvent) => void
-    removable?: boolean
+const inputPlaceholder: string = 'Gebe hier Deine Interessen ein'
+const testOptions = [
+    { value: 'java', label: 'Java' },
+    { value: 'javascript', label: 'JavaScript' },
+] // @TODO Replace with real data
+
+const tagComponentStyles = {
+    container: (provided: any, state: any) => ({
+        ...provided,
+        width: 400,
+    }),
 }
+export const TagComponent = () => (
+    <TagContainer>
+        <Select
+            isMulti
+            name="colors"
+            options={testOptions}
+            className="basic-multi-select"
+            classNamePrefix="select"
+            styles={tagComponentStyles}
+            placeholder={inputPlaceholder}
+        />
+        <Button onClick={() => {}}>🔍</Button>
+    </TagContainer>
+)
 
-export const Tag = ({ children, removable }: TagProps) => {
-    return <StyledTagComponent>{children}</StyledTagComponent>
-}
-
-const StyledTagComponent = styled.span`
-    border: none;
-    border-radius: 1em;
-    background-color: ${() => colors.primary.main};
-    color: ${() => colors.primary.text};
-    width: 3em;
-    height: 1em;
-    &:after {
-        top: 0;
-        content: '𝗑';
-    }
+const TagContainer = styled.div`
+    display: flex;
 `

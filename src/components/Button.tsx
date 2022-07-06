@@ -22,4 +22,5 @@ const StyledButton = styled.button<StyledButtonProps>`
     border: none;
     background-color: ${(props) =>
         props.primary ? colors.primary.main : colors.secondary.main};
+    border-radius: 0.25em;
 `
