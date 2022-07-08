@@ -2,6 +2,7 @@ import React from 'react'
 import Select from 'react-select'
 import { Button } from './Button'
 import styled from 'styled-components'
+import { colors } from '../styles/theme'
 
 const inputPlaceholder: string = 'Gebe hier Deine Interessen ein'
 const testOptions = [
@@ -9,21 +10,14 @@ const testOptions = [
     { value: 'javascript', label: 'JavaScript' },
 ] // @TODO Replace with real data
 
-const tagComponentStyles = {
-    container: (provided: any, state: any) => ({
-        ...provided,
-        width: 400,
-    }),
-}
 export const TagComponent = () => (
     <TagContainer>
         <Select
             isMulti
             name="colors"
             options={testOptions}
-            className="basic-multi-select"
-            classNamePrefix="select"
-            styles={tagComponentStyles}
+            className="humlib-select"
+            classNamePrefix="humlib-select"
             placeholder={inputPlaceholder}
         />
         <Button onClick={() => {}}>🔍</Button>
@@ -32,4 +26,10 @@ export const TagComponent = () => (
 
 const TagContainer = styled.div`
     display: flex;
+    .humlib-select {
+        width: 400px;
+    }
+    .humlib-select .humlib-select__multi-value {
+        background-color: ${colors.primary.light};
+    }
 `
