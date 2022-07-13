@@ -4,6 +4,7 @@
         "esbenp.prettier-vscode",
         "eamodio.gitlens",
         "seatonjiang.gitmoji-vscode",
-        "diegolincoln.vscode-styled-components"
+        "diegolincoln.vscode-styled-components",
+        "github.vscode-pull-request-github"
     ]
 }
