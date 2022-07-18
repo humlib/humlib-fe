@@ -1,11 +1,11 @@
-type Color = {
+interface Color {
     main: string
     light: string
     dark: string
     text: string
 }
 
-type ColorsMatrix = {
+interface ColorsMatrix {
     primary: Color
     secondary: Color
 }

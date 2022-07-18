@@ -1,9 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { FirstVisitModal } from '../components/FirstVisitModal'
-import { Headline } from '../components/Headline'
+import { Link } from '../components/Link'
+import { PageTitle } from '../components/PageTitle'
 import { SearchBar } from '../components/SearchBar'
-import { Subtitle } from '../components/Subtitle'
 import { VerticalContainer } from '../layout/Container'
 import { Screen } from '../layout/Screen'
 import { selectFirstVisit } from '../redux/userSlice'
@@ -14,9 +14,12 @@ export const Search = () => {
         <Screen>
             {firstVisit && <FirstVisitModal />}
             <VerticalContainer stretch>
-                <Headline>HumLib</Headline>
-                <Subtitle>Entdecke Deinen Beruf</Subtitle>
+                <PageTitle />
                 <SearchBar />
+                <Link
+                    url="https://example.org"
+                    label="Wie funktioniert die HumLib?"
+                />
             </VerticalContainer>
         </Screen>
     )

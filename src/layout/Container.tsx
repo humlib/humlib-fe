@@ -17,6 +17,7 @@ const LVerticalContainer = styled.div<StyledContainerProps>`
     display: flex;
     flex-direction: column;
     height: ${(props) => (props.stretch ? '100%' : 'auto')};
+    align-items: center;
     justify-content: center;
 `
 

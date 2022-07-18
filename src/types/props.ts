@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
 
-export type DefaultProps = {
+export interface DefaultProps {
     children: ReactNode
 }
