@@ -7,7 +7,7 @@ type AnkerProps = {
     textLink: boolean
 }
 
-const Anker = styled.a`
+const Anchor = styled.a`
     text-decoration: ${(props: AnkerProps) =>
         props.textLink ? 'underline' : 'none'};
     color: ${colors.secondary.text};
@@ -20,7 +20,7 @@ interface LinkProps {
 }
 
 export const Link = ({ url, label, icon }: LinkProps) => (
-    <Anker href={url} textLink={!icon} target="_blank">
+    <Anchor href={url} textLink={!icon} target="_blank">
         {icon ? icon : label}
-    </Anker>
+    </Anchor>
 )
