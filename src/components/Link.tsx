@@ -3,12 +3,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../styles/theme'
 
-type AnkerProps = {
+interface AnchorProps {
     textLink: boolean
 }
 
 const Anchor = styled.a`
-    text-decoration: ${(props: AnkerProps) =>
+    text-decoration: ${(props: AnchorProps) =>
         props.textLink ? 'underline' : 'none'};
     color: ${colors.secondary.text};
 `
