@@ -4,10 +4,10 @@ import { colors } from '../styles/theme'
 import type { DefaultProps } from '../types/props'
 
 export const Headline = ({ children }: DefaultProps) => (
-    <LHeadline>{children}</LHeadline>
+    <StyledHeadline>{children}</StyledHeadline>
 )
 
-const LHeadline = styled.h1`
+const StyledHeadline = styled.h1`
     color: ${colors.secondary.text};
     font-size: 3rem;
 `

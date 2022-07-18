@@ -4,10 +4,10 @@ import { colors } from '../styles/theme'
 import { DefaultProps } from '../types/props'
 
 export const Subtitle = ({ children }: DefaultProps) => (
-    <LSubtitle>{children}</LSubtitle>
+    <StyledSubtitle>{children}</StyledSubtitle>
 )
 
-const LSubtitle = styled.h2`
+const StyledSubtitle = styled.h2`
     color: ${colors.secondary.text};
     font-size: 1.25rem;
 `
