@@ -10,6 +10,10 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
             },
+            {
+                test: /\.(woff2|woff|eot|ttf|otf)$/,
+                type: 'asset/resource',
+            },
         ],
     },
     resolve: {
