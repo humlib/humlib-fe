@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../styles/theme'
 import type { DefaultProps } from '../types/props'
+
 interface ButtonProps extends DefaultProps {
     primary?: boolean
     onClick: (evt: MouseEvent) => void

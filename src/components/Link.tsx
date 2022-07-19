@@ -1,14 +1,16 @@
 import type { ReactNode } from 'react'
 import React from 'react'
 import styled from 'styled-components'
+import { colors } from '../styles/theme'
 
-type AnkerProps = {
+interface AnchorProps {
     textLink: boolean
 }
 
-const Anker = styled.a`
-    text-decoration: ${(props: AnkerProps) =>
+const Anchor = styled.a`
+    text-decoration: ${(props: AnchorProps) =>
         props.textLink ? 'underline' : 'none'};
+    color: ${colors.secondary.text};
 `
 
 interface LinkProps {
@@ -18,7 +20,7 @@ interface LinkProps {
 }
 
 export const Link = ({ url, label, icon }: LinkProps) => (
-    <Anker href={url} textLink={!icon} target="_blank">
-        {icon}
-    </Anker>
+    <Anchor href={url} textLink={!icon} target="_blank">
+        {icon ? icon : label}
+    </Anchor>
 )

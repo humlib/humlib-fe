@@ -4,20 +4,17 @@ import {
     IconDefinition,
 } from '@fortawesome/free-brands-svg-icons'
 import { faGavel } from '@fortawesome/free-solid-svg-icons'
-import {
-    FontAwesomeIcon,
-    FontAwesomeIconProps,
-} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../styles/theme'
 import { Link } from './Link'
 
-type SocialBarItemPros = {
+interface SocialBarItemProps {
     icon: IconDefinition
 }
 
-const SocialBarIcon = ({ icon }: SocialBarItemPros) => (
+const SocialBarIcon = ({ icon }: SocialBarItemProps) => (
     <FontAwesomeIcon
         icon={icon}
         size="2x"

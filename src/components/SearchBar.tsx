@@ -12,6 +12,7 @@ export const SearchBar = () => (
 
 const Container = styled.div`
     display: flex;
+    margin: 30px 0;
     input {
         flex: 1;
         border: 2px solid ${colors.primary.main};
