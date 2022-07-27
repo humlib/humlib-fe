@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+const ResetCSS = createGlobalStyle`
 /* Box sizing rules */
 *,
 *::before,
@@ -65,7 +65,7 @@ select {
   html:focus-within {
    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -77,4 +77,4 @@ select {
 }
 `
 
-export default GlobalStyle
+export default ResetCSS
